@@ -10,6 +10,7 @@
     "react": "^17.0.2",
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "^17.0.2",
+    "react-in-viewport": "^1.0.0-alpha.28",
     "react-move": "^6.5.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

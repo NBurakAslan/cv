@@ -1,0 +1,38 @@
+.parag {
+  display: grid;
+  height: 100vh;
+}
+
+.h2Class {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: AvenirHeavy;
+  color: rgb(109, 105, 105);
+  margin-top: 20px;
+  left: -15%;
+  animation: 3s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
+    h2animation;
+  font-size: 200px;
+}
+
+.parag p {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: AvenirLight;
+  font-size: 32px;
+  align-items: center;
+  text-align: left;
+  margin-left: 30%;
+  margin-right: 5%;
+}
+
+@keyframes h2animation {
+  0% {
+    opacity: 0.6;
+    transform: translateX(-44.3423%);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(30%);
+  }
+}
