@@ -4,6 +4,7 @@
 }
 
 .h2Class {
+  width: 800px;
   grid-column: 1;
   grid-row: 1;
   font-family: AvenirHeavy;
