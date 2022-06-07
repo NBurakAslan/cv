@@ -84,12 +84,12 @@ div.cardfan img {
 }
 div.cardfan img:first-child {
   transform: rotate(5deg);
-  animation: 2s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
+  animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
     firstImgAnime;
 }
 div.cardfan img:last-child {
   transform: rotate(-5deg);
-  animation: 2s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
+  animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
     secondImgAnime;
 }
 /* div.cardfan:hover img:first-child {
