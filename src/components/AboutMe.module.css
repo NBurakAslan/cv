@@ -11,8 +11,8 @@
   color: rgb(109, 105, 105);
 
   left: -15%;
-  animation: 4s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal forwards running
-    h2animation;
+  animation: 4s cubic-bezier(0, 0.1, 0.12, 0.99) 0s 1 normal
+    forwards running h2animation;
   font-size: 150px;
 }
 
@@ -84,13 +84,13 @@ div.cardfan img {
 }
 div.cardfan img:first-child {
   transform: rotate(5deg);
-  animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
-    firstImgAnime;
+  animation: 3s cubic-bezier(0, 0.1, 0.12, 0.99) 1s 1 normal
+    forwards running firstImgAnime;
 }
 div.cardfan img:last-child {
   transform: rotate(-5deg);
-  animation: 1s cubic-bezier(0, 0.1, 0.12, 0.99) 2s 1 normal forwards running
-    secondImgAnime;
+  animation: 3s cubic-bezier(0, 0.1, 0.12, 0.99) 1s 1 normal
+    forwards running secondImgAnime;
 }
 /* div.cardfan:hover img:first-child {
   transform: rotate(25deg);

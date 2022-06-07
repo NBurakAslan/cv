@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
-import Skills from "./components/SkillCard";
+import SkillCardList from "./components/SkillCardList";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 import { useInView } from "react-intersection-observer";
@@ -19,7 +19,7 @@ function App(props) {
         {inView1 && <AboutMe></AboutMe>}
       </div>
       <div ref={ref2} style={{ height: "100vh" }}>
-        {inView2 && <Skills></Skills>}
+        {inView2 && <SkillCardList />}
       </div>
     </div>
   );
