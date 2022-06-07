@@ -1,9 +1,12 @@
 import React from "react";
 import classes from "./AboutMe.module.css";
+import profiloimg1 from "./../img/profiloimg1.jpg";
+import pro2 from "./../img/pro2.jpeg";
+import lacin from "./../img/lacin.jpg";
 function AboutMe(props) {
   return (
     <div className={classes.parag}>
-      <h2 className={classes.h2Class}>ABOUT ME</h2>
+      <div className={classes.h2Class}>ABOUT ME</div>
       <p>
         Front-end developer who loves to keep tracking and learning new
         technologies. My newborn daughter who adds more motivation to me to keep
@@ -13,9 +16,11 @@ function AboutMe(props) {
         team. Last 5 years I started focus on front-end development with my best
         friend guidance, who he’s a master full-stack developer in England.
       </p>
-      <img />
-      <img />
-      <img />
+      <div className={classes.cardfan}>
+        <img alt="My Daughter" src={lacin} />
+        <img alt="My Daughter2" src={profiloimg1} />
+        <img alt="My Daughter2" src={pro2} />
+      </div>
     </div>
   );
 }

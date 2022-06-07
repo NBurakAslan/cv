@@ -4,17 +4,22 @@ import AboutMe from "./components/AboutMe";
 import Skills from "./components/SkillCard";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
+import { useInView } from "react-intersection-observer";
 function App(props) {
-  const myRef = useRef();
-
-  const { inViewport, enterCount, leaveCount } = useInViewport(myRef, props);
-  console.log(inViewport, enterCount);
+  const [ref1, inView1] = useInView();
+  const [ref2, inView2] = useInView();
+  console.log(inView1, inView2);
   return (
     <div>
-      <Header></Header>
-      <AboutMe></AboutMe>
-      <div ref={myRef} style={{ height: "100vh" }}>
-        {inViewport && enterCount === 1 && <Skills></Skills>}
+      <div style={{ height: "101vh" }}>
+        <Header></Header>
+      </div>
+
+      <div ref={ref1} style={{ height: "100vh" }}>
+        {inView1 && <AboutMe></AboutMe>}
+      </div>
+      <div ref={ref2} style={{ height: "100vh" }}>
+        {inView2 && <Skills></Skills>}
       </div>
     </div>
   );
