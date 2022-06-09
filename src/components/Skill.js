@@ -1,27 +1,19 @@
 import React from "react";
-import {
-  CircularProgressbar,
-  buildStyles,
-} from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { easeQuadInOut } from "d3-ease";
 import AnimatedProgressProvider from "./AnimatedProgressProvider";
 import classes from "./Skill.module.css";
 function Skill(props) {
-  const value = 0.66;
-
   return (
-    <div
-      className={classes.skillCard}
-      style={{ width: 200, height: 200 }}
-    >
+    <div className={classes.skillCard} style={{ width: 200, height: 200 }}>
       <AnimatedProgressProvider
         valueStart={0}
-        valueEnd={66}
+        valueEnd={props.value}
         duration={1.4}
         easingFunction={easeQuadInOut}
       >
-        {value => {
+        {(value) => {
           const roundedValue = Math.round(value);
           return (
             <CircularProgressbar
