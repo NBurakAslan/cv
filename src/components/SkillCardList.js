@@ -2,22 +2,58 @@ import React from "react";
 import classes from "./SkillCardList.module.css";
 import styled, { keyframes } from "styled-components";
 import { fadeInUp } from "react-animations";
-import lacin from "./../img/lacin.jpg";
+import is1 from "./../img/is1.jpeg";
+import is2 from "./../img/is2.jpeg";
+import is3 from "./../img/is3.jpeg";
+import SkillImgCard from "./SkillImgCard";
+
 const bounceAnimation = keyframes`${fadeInUp}`;
 
-const BouncyImg = styled.img`
-  position: absolute;
-  width: 240px;
-  height: 320px;
-  border-radius: 7px;
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+const NewImg1 = styled(SkillImgCard)`
+  grid-column: 2;
+  grid-row: 1;
   animation: 1s ${bounceAnimation};
 `;
 
+const NewImg2 = styled(SkillImgCard)`
+  grid-column: 1;
+  grid-row: 2;
+
+  animation: 1s ${bounceAnimation};
+`;
+const NewImg3 = styled(SkillImgCard)`
+  grid-column: 2;
+  grid-row: 3;
+  animation: 1s ${bounceAnimation};
+`;
+
+const data = [
+  {
+    paragh:
+      "Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.",
+    title: "Lorem ipsum.",
+    aciklama: "More lorem ipsum bacon ipsum.",
+    src: is1,
+  },
+  {
+    paragh:
+      "Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.",
+    title: "Lorem ipsum.",
+    aciklama: "More lorem ipsum bacon ipsum.",
+    src: is2,
+  },
+  {
+    paragh:
+      "Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.",
+    title: "Lorem ipsum.",
+    aciklama: "More lorem ipsum bacon ipsum.",
+    src: is3,
+  },
+];
 function SkillCardList(props) {
   return (
     <div className={classes.skillCardList}>
-      <h2>SKILLS</h2>
+      <h2 className={classes.title}>SKILLS</h2>
       <div className={classes.mainSkills}>
         <div style={{ "--order": 1.5 }}>HTML</div>
         <div style={{ "--order": 3 }}>CSS</div>
@@ -41,7 +77,9 @@ function SkillCardList(props) {
         <p>git</p>
       </div>
       <div className={classes.imganimation}>
-        <BouncyImg src={lacin}></BouncyImg>
+        <NewImg1 {...data[0]}></NewImg1>
+        <NewImg2 {...data[1]}></NewImg2>
+        <NewImg3 {...data[2]}></NewImg3>
       </div>
     </div>
   );
